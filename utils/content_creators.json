@@ -1,0 +1,16 @@
+{
+  "channels": [
+    {
+      "name": "sweetily",
+      "games": ["wuthering_waves", "zenless_zone_zero", "honkai_star_rail"]
+    },
+    {
+      "name": "MrPokke",
+      "games": ["wuthering_waves", "zenless_zone_zero", "honkai_star_rail"]
+    },
+    {
+      "name": "Tectone",
+      "games": ["wuthering_waves", "zenless_zone_zero", "honkai_star_rail"]
+    }
+  ]
+}
