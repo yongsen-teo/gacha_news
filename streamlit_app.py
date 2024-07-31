@@ -37,7 +37,13 @@ if button or (url and st.session_state.url_input != st.session_state.get('previo
 
     if url:
         video_id = get_youtube_id(url)
-        video_title = get_video_title(url)
+
+        # TODO: add the VIDEO TITLE WELL (TEST MORE)
+        # if not --> then just use user input 
+        # 
+        #
+        video_title = st.text_input("Enter youtube title", key="video_title_input")
+        # video_title = get_video_title(url)
 
         if video_id:
             transcript = get_transcript(video_id)
