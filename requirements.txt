@@ -4,3 +4,4 @@ numpy
 openai
 anthropic
 youtube-transcript-api
+python-dotenv
