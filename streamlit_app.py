@@ -4,6 +4,10 @@ from youtube_transcript_api import YouTubeTranscriptApi
 from llm_engine.summarizer import summarizer
 from utils.get_video_title import get_video_title
 
+openai_api_key = st.secrets["OPENAI_API_KEY"]
+openai_org_id = st.secrets["OPENAI_ORG_ID"]
+anthropic_api_key = st.secrets["ANTHROPIC_API_KEY"]
+youtube_api_key = st.secrets["YOUTUBE_API_KEY"]
 
 def get_youtube_id(url):
     # Extract video ID from YouTube URL
