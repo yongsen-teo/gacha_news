@@ -1,17 +1,26 @@
 import os
 
 import anthropic
+import streamlit as st
 from dotenv import load_dotenv
 from openai import OpenAI
+
+openai_api_key = st.secrets["OPENAI_API_KEY"]
+openai_org_id = st.secrets["OPENAI_ORG_ID"]
+anthropic_api_key = st.secrets["ANTHROPIC_API_KEY"]
+youtube_api_key = st.secrets["YOUTUBE_API_KEY"]
 
 from utils.llm_utils import (arrange_user_prompt, choose_anthropic,
                              choose_openai)
 
 env = load_dotenv()
 
-LLM_CLIENT = choose_anthropic()
+ANTHROPIC_CLIENT = choose_anthropic()
+OPENAI_CLIENT = choose_openai()
 
-def summarizer(video_title, video_transcript, client=LLM_CLIENT):
+def summarizer(video_title, video_transcript, client=ANTHROPIC_CLIENT):
+    new_user_prompt = arrange_user_prompt(video_title, video_transcript)
+
     message = client.messages.create(
         model="claude-3-5-sonnet-20240620",
         max_tokens=1000,
@@ -95,7 +104,7 @@ def summarizer(video_title, video_transcript, client=LLM_CLIENT):
                 "content": [
                     {
                         "type": "text",
-                        "text": f"<video_title>{video_title}</video_title>\n\n<video_transcript>{video_transcript}</video_transcript>"
+                        "text": new_user_prompt
                     }
                 ]
             }]

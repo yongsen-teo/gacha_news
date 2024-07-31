@@ -11,6 +11,8 @@ load_dotenv()
 api_key = os.getenv('YOUTUBE_API_KEY')
 youtube = build('youtube', 'v3', developerKey=api_key)
 
+# TODO: add streamlit secrets key
+
 def get_video_title(video_url):
     # Extract video ID from URL
     video_id = None

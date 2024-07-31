@@ -2,13 +2,20 @@ import os
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
+import streamlit as st
 from dotenv import load_dotenv
 from googleapiclient.discovery import build
 
 load_dotenv()
 
 # YouTube API setup
-api_key = os.getenv('YOUTUBE_API_KEY')
+# api_key = os.getenv('YOUTUBE_API_KEY')
+
+openai_api_key = st.secrets["OPENAI_API_KEY"]
+openai_org_id = st.secrets["OPENAI_ORG_ID"]
+anthropic_api_key = st.secrets["ANTHROPIC_API_KEY"]
+api_key = st.secrets["YOUTUBE_API_KEY"]
+
 youtube = build('youtube', 'v3', developerKey=api_key)
 
 def get_channel_id(channel_name):
