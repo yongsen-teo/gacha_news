@@ -26,3 +26,6 @@ main-app-image-descriptions-service-account-credentials.json
 
 # PDF files
 .pdf
+
+# TODO files
+.txt

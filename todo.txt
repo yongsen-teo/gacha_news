@@ -1,0 +1,2 @@
+- add whisper api for better caption
+- but this will need mp3 files instead

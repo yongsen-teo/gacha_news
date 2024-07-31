@@ -1,5 +1,6 @@
 from youtube_transcript_api import YouTubeTranscriptApi
 
+# TODO: add whisper API instead of youtube caption
 
 def get_transcript_from_id(video_id):
     """
