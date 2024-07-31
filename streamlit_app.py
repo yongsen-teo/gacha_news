@@ -10,7 +10,6 @@ anthropic_api_key = st.secrets["ANTHROPIC_API_KEY"]
 youtube_api_key = st.secrets["YOUTUBE_API_KEY"]
 
 def get_youtube_id(url):
-    # Extract video ID from YouTube URL
     if "youtu.be" in url:
         return url.split("/")[-1]
     elif "youtube.com" in url:
@@ -45,14 +44,9 @@ if button or (url and st.session_state.url_input != st.session_state.get('previo
             summarized_notes = summarizer(video_title=video_title,
                                           video_transcript=transcript)
             st.markdown(summarized_notes)
-
-            # allowing markdown to be shown
-            # st.text_area("Bite-size Info", st.markdown(summarized_notes), height=300)
-
         else:
             st.error("Invalid YouTube URL")
     else:
         st.warning("Please enter a YouTube URL")
 
-    # Store the current URL to check for changes
     st.session_state['previous_url'] = url
