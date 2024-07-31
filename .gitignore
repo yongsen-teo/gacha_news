@@ -7,6 +7,11 @@
 env/
 .env
 
+# streamlit secrets
+.streamlit/secrets.toml
+secrets.toml
+*.toml
+
 # Pycache files
 __pycache__/
 __pycache__
