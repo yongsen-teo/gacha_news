@@ -1,0 +1,6 @@
+streamlit
+pandas
+numpy
+openai
+anthropic
+youtube-transcript-api
