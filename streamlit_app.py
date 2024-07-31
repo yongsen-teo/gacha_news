@@ -32,6 +32,8 @@ with col1:
 with col2:
     button = st.button("Enter")
 
+video_title = st.text_input("Enter youtube title", key="video_title_input")
+
 # Check if the button is clicked or Enter key is pressed
 if button or (url and st.session_state.url_input != st.session_state.get('previous_url', '')):
 
@@ -42,7 +44,6 @@ if button or (url and st.session_state.url_input != st.session_state.get('previo
         # if not --> then just use user input 
         # 
         #
-        video_title = st.text_input("Enter youtube title", key="video_title_input")
         # video_title = get_video_title(url)
 
         if video_id:
