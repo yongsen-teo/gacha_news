@@ -5,4 +5,4 @@ openai
 anthropic
 youtube-transcript-api
 python-dotenv
-googleapiclient
+google-api-python-client
