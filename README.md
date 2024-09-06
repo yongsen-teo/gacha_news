@@ -10,3 +10,7 @@
 - Then the video summarizer will give you a structured summarised notes on the video content
   
 ![image](https://github.com/user-attachments/assets/668c6d6d-b9ad-4c68-bd3d-2ed7a678b465)
+
+P.S. 
+- To run the application locally, you have replace the streamlit secrets with your own API key
+- Then, run "streamlit run streamlit_app.py"
